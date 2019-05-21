@@ -1,0 +1,4 @@
+baseURL = "http://lawandogre.com/"
+languageCode = "en-us"
+title = "Law & Ogre: DUN DUN"
+theme = "logre"
