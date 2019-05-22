@@ -1,0 +1,134 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* end reset */
+
+
+
+/*
+grey #515367
+white #F7F7FF
+yellow #E8F72A
+blue #279AF1
+red #C49991
+*/
+body {
+  background-color: #F7F7F7;
+  color: #515367;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  line-height: calc(1.25em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
+}
+
+#site {
+	margin: 0 auto;
+	max-width: 1024px;
+	padding: 0 60px 48px;
+}
+
+/* tag-level stuff */
+p {
+  font-size: 16px;
+	margin: 0 0 18px;
+}
+
+.small-caps {
+	font-variant: small-caps;
+	font-weight: bold;
+}
+
+a {
+  color: #279AF1;
+	font-weight: bold;
+}
+
+h1 {
+	font-weight: bold;
+	font-size: 2rem;
+	margin: 0 0 15px;
+}
+
+h2 {
+	font-weight: bold;
+	font-size: 1.3rem;
+}
+
+/* header stuff */
+header {
+  background-color: #515367;
+	height: 114px;
+	overflow: hidden;
+}
+
+#logo {
+	height: 100%;
+}
+
+/* grid */
+#content-grid {
+	display: grid;
+	grid-template-areas: "main sidebar";
+	grid-template-columns: calc(80% - 30px) 20%;
+  grid-column-gap: 30px;
+	grid-template-rows: auto;
+}
+
+main {
+	grid-area: main;
+	padding: 45px 25px 50px;
+}
+
+#sidebar {
+	grid-area: sidebar;
+	padding: 45px 0;
+}
+
+#sidebar-content {
+	background-color: #515367;
+	color: #F7F7F7;
+	padding: 45px 15px 50px;
+}
