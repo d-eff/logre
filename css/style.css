@@ -21,6 +21,7 @@ body {
 }
 
 #screensaver img {
+  cursor: none;
   height: 100%;
   width: 100%;
 }
