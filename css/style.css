@@ -138,5 +138,30 @@ body {
 }
 
 .boxBody {
+  display: flex;
   flex-grow: 1;
+}
+
+.icon {
+  cursor: pointer;
+  height: 100%;
+  margin: 12px 15px;
+  text-align: center;
+}
+
+.icon img {
+  width: 70px;
+}
+
+.iconCheck {
+  display: none;
+}
+
+.icon h3 {
+  padding: 1px 2px;
+}
+
+.iconCheck:checked~label h3{
+  background-color: #5577AA;
+  color: #FCFCFC;
 }

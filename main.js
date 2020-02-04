@@ -1,21 +1,34 @@
-const addMenuToggle = () => {
-  let menuChecks = document.getElementsByClassName("menuCheck");
-  let body = document.getElementsByClassName("boxBody")[0];
-  for(let checkbox of menuChecks) {
+const addMenuToggle = (classname) => {
+  let checks = document.getElementsByClassName(classname);
+  for(let checkbox of checks) {
     checkbox.addEventListener('click', () => {
-      for(let box of menuChecks) {
+      console.log('box in');
+      for(let box of checks) {
         if(box !== event.target) {
           box.checked = false;
         }
       }
+      console.log('box out');
     });
   }
+}
 
-  body.addEventListener('click', () => {
-    for(let box of menuChecks) {
-      box.checked = false;
+const addBodyDeselector = () => {
+  let menuChecks = document.getElementsByClassName("menuCheck");
+  let iconChecks = document.getElementsByClassName("iconCheck");
+  let body = document.getElementsByClassName("boxBody")[0];
+  body.addEventListener('click', (e) => {
+    console.log('body in');
+    for(let menu of menuChecks) {
+      menu.checked = false;
     }
-  })
+    for(let icon of iconChecks) {
+      if(e.target !== icon) {
+        icon.checked = false;
+      }
+    }
+    console.log('body out');
+  });
 }
 
 const enableScreensaver = () => {
@@ -26,7 +39,7 @@ const enableScreensaver = () => {
   //because js context makes my nose bleed
   body.addEventListener('mousemove', debounce(function() {
     setScreensaverVis(true);
-  }, 30000));
+  }, 60000));
 
   screensaver.addEventListener('mousemove', function() {
     setScreensaverVis(false);
@@ -49,5 +62,7 @@ const debounce = (func, delay) => {
   } 
 }
 
-addMenuToggle();
+addMenuToggle("menuCheck");
+addMenuToggle("iconCheck");
+addBodyDeselector();
 enableScreensaver();
