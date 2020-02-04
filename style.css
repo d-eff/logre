@@ -6,6 +6,7 @@
 body {
   background-color: #C0C4C8;
   font-family: 'DOS', serif;
+  padding: 20px;
 }
 
 .box {
@@ -24,23 +25,10 @@ body {
   position: relative;
 }
 
-.boxTitle, .boxMenu {
+.boxHead h1 {
   font-size: 24px;
-  margin: 0;
-  padding-top: 2px;
-}
-
-.boxTitle {
   margin: 0 auto;
-}
-
-.boxMenu {
-  letter-spacing: -2px;
-  margin: 0 12px;
-}
-
-.uline {
-  text-decoration: underline;
+  padding-top: 2px;
 }
 
 .greyBox {
@@ -71,4 +59,37 @@ body {
   top: 12px;
   width: 18px;
   z-index: 0;
+}
+
+.uline {
+  text-decoration: underline;
+}
+
+.boxMenu {
+  border-bottom: 2px solid #000;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0; 
+}
+
+.boxMenu li {
+  padding: 0 12px 0;
+}
+
+.boxMenu h2 {
+  font-size: 24px;
+  letter-spacing: -2px;
+  margin: 0;
+}
+
+.subMenu {
+  background: #FCFCFC;
+  border: 2px solid #000;
+  position: absolute;
+}
+
+.subMenu li:hover {
+  background-color: #000;
+  color: #FCFCFC;
 }
