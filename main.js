@@ -2,13 +2,11 @@ const addMenuToggle = (classname) => {
   let checks = document.getElementsByClassName(classname);
   for(let checkbox of checks) {
     checkbox.addEventListener('click', () => {
-      console.log('box in');
       for(let box of checks) {
         if(box !== event.target) {
           box.checked = false;
         }
       }
-      console.log('box out');
     });
   }
 }
@@ -18,7 +16,6 @@ const addBodyDeselector = () => {
   let iconChecks = document.getElementsByClassName("iconCheck");
   let body = document.getElementsByClassName("boxBody")[0];
   body.addEventListener('click', (e) => {
-    console.log('body in');
     for(let menu of menuChecks) {
       menu.checked = false;
     }
@@ -27,21 +24,27 @@ const addBodyDeselector = () => {
         icon.checked = false;
       }
     }
-    console.log('body out');
   });
 }
 
 const enableScreensaver = () => {
   let body = document.body;
   let screensaver = document.getElementById('screensaver');
+  const SCREENSAVER_TIMEOUT = 60000;
 
+  const debouncedScreensaver = debounce(function() {
+    setScreensaverVis(true);
+  }, SCREENSAVER_TIMEOUT)
   //using this syntax specifically because of the debounce
   //because js context makes my nose bleed
-  body.addEventListener('mousemove', debounce(function() {
-    setScreensaverVis(true);
-  }, 60000));
+  body.addEventListener('mousemove', debouncedScreensaver);
+  body.addEventListener('keypress', debouncedScreensaver);
 
   screensaver.addEventListener('mousemove', function() {
+    setScreensaverVis(false);
+  });
+
+  screensaver.addEventListener('keypress', function() {
     setScreensaverVis(false);
   });
 }
