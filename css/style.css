@@ -9,6 +9,26 @@ body {
   padding: 20px;
 }
 
+#screensaver {  
+  cursor: none;
+  display: none;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;
+}
+
+#screensaver img {
+  height: 100%;
+  width: 100%;
+}
+
+#screensaver.visible {
+  display: block;
+}
+
 .box {
   background-color: #FCFCFC;
   border: 6px double #000;
@@ -21,7 +41,9 @@ body {
 }
 
 .boxHead {
+  background-color: #5577AA;
   border-bottom: 2px solid #000;
+  color: #FCFCFC;
   display: flex;
   margin: 0;
   position: relative;
