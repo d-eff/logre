@@ -13,13 +13,13 @@
         <div class="boxHead">
           <span class="greyBox">
             <span class="dash"></span>
-            <span class="dash-shadow"></span>
           </span>
           <h1>Program Manager</h1>
         </div>
         <ul class="boxMenu">
           <li>
-            <h2><span class="uline">F</span>ile</h2>
+            <input class="menuCheck" id="file" type="checkbox" name="file">
+            <label for="file"><h2><span class="uline">F</span>ile</h2></label>
             <ul class="subMenu">
               <li><h2><span class="uline">N</span>ew...</h2></li>
               <li><h2><span class="uline">O</span>pen</h2></li>
@@ -27,21 +27,39 @@
               <li><h2><span class="uline">C</span>opy...</h2></li>
               <li><h2><span class="uline">D</span>elete</h2></li>
               <li><h2><span class="uline">P</span>roperties</h2></li>
-              <li><h2><span class="uline">R</span>un...</h2></li>
-              <li><h2>E<span class="uline">x</span>it Windows</h2></li>
+              <li class="topBorder"><h2><span class="uline">R</span>un...</h2></li>
+              <li class="topBorder"><h2>E<span class="uline">x</span>it Windows</h2></li>
+            </ul>
+            <div class="menuShadow"></div>
+          </li>
+          <li>
+            <input class="menuCheck" id="options" type="checkbox" name="options">
+            <label for="options"><h2><span class="uline">O</span>ptions</h2></label>
+            <ul class="subMenu">
+              <li><h2><span class="uline">N</span>ew...</h2></li>
+              <li><h2><span class="uline">O</span>pen</h2></li>
             </ul>
           </li>
           <li>
-            <h2><span class="uline">O</span>ptions</h2>
+            <input class="menuCheck" id="window" type="checkbox" name="window">
+            <label for="window"><h2><span class="uline">W</span>indow</h2></label>
+            <ul class="subMenu">
+              <li><h2><span class="uline">N</span>ew...</h2></li>
+              <li><h2><span class="uline">O</span>pen</h2></li>
+            </ul>
           </li>
           <li>
-            <h2><span class="uline">W</span>indow</h2>
-          </li>
-          <li>
-            <h2><span class="uline">H</span>elp</h2>
+            <input class="menuCheck" id="help" type="checkbox" name="help">
+            <label for="help"><h2><span class="uline">H</span>elp</h2></label>
+            <ul class="subMenu">
+              <li><h2><span class="uline">N</span>ew...</h2></li>
+              <li><h2><span class="uline">O</span>pen</h2></li>
+            </ul>
           </li>
         </ul>
       </div>
     </main>
+
+    <script type="text/javascript" src="main.js"></script>
   </body>
 </html>

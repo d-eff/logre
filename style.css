@@ -14,8 +14,8 @@ body {
   background-color: #FCFCFC;
   border: 6px double #000;
   margin: 0 auto;
-  min-height: 200px;
-  width: 70%;
+  min-height: 80vh;
+  width: 70vw;
 }
 
 .boxHead {
@@ -42,6 +42,7 @@ body {
 .dash {
   background-color: #FCFCFC;
   border: 2px solid #000;
+  box-shadow: 2px 1px #84888C;
   display: block;
   height: 1px;
   left: 2px;
@@ -49,16 +50,6 @@ body {
   top: 10px;
   width: 14px;
   z-index: 1;
-}
-.dash-shadow {
-  background-color: #84888C;
-  display: block;
-  height: 4px;
-  left: 3px;
-  position: absolute;
-  top: 12px;
-  width: 18px;
-  z-index: 0;
 }
 
 .uline {
@@ -74,7 +65,12 @@ body {
 }
 
 .boxMenu li {
-  padding: 0 12px 0;
+  cursor: pointer;
+}
+
+.boxMenu label {
+  display: inline-block;
+  padding: 0 15px 0;
 }
 
 .boxMenu h2 {
@@ -83,13 +79,36 @@ body {
   margin: 0;
 }
 
+.menuCheck, .subMenu {
+  display: none;
+}
+
+.menuCheck:checked~label {
+  background-color: #000;
+  color: #FCFCFC;
+}
+
+.menuCheck:checked~.subMenu {
+  display: block;
+}
+
 .subMenu {
   background: #FCFCFC;
   border: 2px solid #000;
+  box-shadow: 2px 2px #84888C;
+  min-width: 280px;
   position: absolute;
+}
+
+.subMenu li {
+  padding: 0 0 0 24px;
 }
 
 .subMenu li:hover {
   background-color: #000;
   color: #FCFCFC;
+}
+
+.topBorder {
+  border-top: 2px solid #000;
 }
