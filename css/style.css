@@ -146,10 +146,13 @@ body {
 }
 
 .icon {
-  cursor: pointer;
   height: 100%;
   margin: 12px 15px;
   text-align: center;
+}
+
+.icon label {
+  cursor: pointer;
 }
 
 .icon img {
